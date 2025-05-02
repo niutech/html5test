@@ -1851,8 +1851,7 @@ var tests = [
 									{
 										id:			'webvr',
 										name: 		'WebVR',
-										status:		'experimental',
-										value:		3,
+										status:		'rejected',
 										url:		'https://w3c.github.io/webvr/'
 
 									}, {
@@ -2543,7 +2542,7 @@ var tests = [
 									{
 										id:			'applicationCache',
 										name: 		'Application Cache',
-										value:		3,
+										status:		'rejected',
 										urls:		[
 														[ 'w3c', 'http://www.w3.org/TR/html5/browsers.html#offline' ],
 														[ 'mdn', '/Web/HTML/Using_the_application_cache' ]
