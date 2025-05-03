@@ -1361,6 +1361,10 @@ var tests = [
 										name: 	'H.266 support',
 										status:	'optional'
 									}, {
+										id:		'codecs.mp4.evc',
+										name: 	'MPEG-5 EVC support',
+										status:	'optional'
+									}, {
 										id:		'codecs.ogg.theora',
 										name: 	'Ogg Theora support',
 										status:	'optional',

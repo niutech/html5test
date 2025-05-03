@@ -2536,6 +2536,13 @@ Test9 = (function () {
                 passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="vvc1.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvi1.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvci.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L0.CQA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L1.CQA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L51.CQA"'))
             });
 
+            /* evc codec */
+
+            results.addItem({
+                key: 'video.codecs.mp4.evc',
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="evc1.vprf0.vlev123"') || canPlayType(element, 'video/mp4; codecs="evc1.vprf1.vlev153"'))
+            });
+
             /* theora codec */
 
             results.addItem({
