@@ -2656,14 +2656,14 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'audio.codecs.aac',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/aac; codecs="mp4a.40.2"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/aac') || canPlayType(element, 'audio/x-aac'))
             });
 
             /* aac-lc codec (m4a) */
 
             results.addItem({
                 key: 'audio.codecs.m4a.aac',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/m4a; codecs="mp4a.40.2"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/m4a; codecs="mp4a.40.2"') || canPlayType(element, 'audio/x-m4a; codecs="mp4a.40.2"'))
             });
 
             /* aac codec (mp4) */
