@@ -2510,7 +2510,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'video.codecs.mp4.mpeg4',
-                passed: !!element.canPlayType && canPlayType(element, 'video/mp4; codecs="mp4v.20.8"')
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="mp4v.20.8"') || canPlayType(element, 'video/mp4; codecs="mp4v.20.9"') || canPlayType(element, 'video/mp4; codecs="mp4v.20.240"'))
             });
 
             /* h.264 codec */
