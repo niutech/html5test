@@ -2529,6 +2529,13 @@ Test9 = (function () {
                 passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="hvc1.1.L0.0"') || canPlayType(element, 'video/mp4; codecs="hev1.1.L0.0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L93.90"') || canPlayType(element, 'video/mp4; codecs="hev1.1.6.L123.B0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L123.B0"') || canPlayType(element, 'video/mp4; codecs="hev1.1.6.L150.B0"') || canPlayType(element, 'video/mp4; codecs="hev1.1.6.L153.B0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L150.B0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L153.B0"'))
             });
 
+            /* h.266 codec */
+
+            results.addItem({
+                key: 'video.codecs.mp4.h266',
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="vvc1.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvi1.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvci.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L0.CQA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L1.CQA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L51.CQA"'))
+            });
+
             /* theora codec */
 
             results.addItem({
