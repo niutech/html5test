@@ -2554,7 +2554,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'video.codecs.webm.av1',
-                passed: !!element.canPlayType && canPlayType(element, 'video/webm; codecs="av01.0.05M.08"')
+                passed: !!element.canPlayType && (canPlayType(element, 'video/webm; codecs="av01.0.01M.08"') || canPlayType(element, 'video/webm; codecs="av01.0.04M.08"') || canPlayType(element, 'video/webm; codecs="av01.0.05M.08"'))
             });
 
             /* does codec detection work properly? */
