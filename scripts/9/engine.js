@@ -2677,7 +2677,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'audio.codecs.flac',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/flac')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/flac') || canPlayType(element, 'audio/mp4; codecs="flac"'))
             });
 
             /* ogg vorbis codec */
