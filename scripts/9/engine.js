@@ -2673,6 +2673,13 @@ Test9 = (function () {
                 passed: !!element.canPlayType && canPlayType(element, 'audio/mp4; codecs="ec-3"')
             });
 
+            /* flac codec */
+
+            results.addItem({
+                key: 'audio.codecs.flac',
+                passed: !!element.canPlayType && canPlayType(element, 'audio/flac')
+            });
+
             /* ogg vorbis codec */
 
             results.addItem({

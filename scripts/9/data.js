@@ -1465,6 +1465,10 @@ var tests = [
 										name: 	'Dolby Digital Plus support',
 										status:	'optional'
 									}, {
+										id:		'codecs.flac',
+										name: 	'FLAC support',
+										status:	'optional'
+									}, {
 										id:		'codecs.ogg.vorbis',
 										name: 	'Ogg Vorbis support',
 										status:	'optional'
