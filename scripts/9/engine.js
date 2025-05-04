@@ -2519,7 +2519,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'video.codecs.mp4.h264',
-                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="avc1.42E01E"') || canPlayType(element, 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'))
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="avc1.42E01E"') || canPlayType(element, 'video/mp4; codecs="avc1.4D401E"') || canPlayType(element, 'video/mp4; codecs="avc1.64001E"') || canPlayType(element, 'video/mp4; codecs="avc1.64002A"') || canPlayType(element, 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'))
             });
 
             /* h.265 codec */
