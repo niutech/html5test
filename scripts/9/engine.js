@@ -2655,6 +2655,20 @@ Test9 = (function () {
             /* aac codec */
 
             results.addItem({
+                key: 'audio.codecs.aac',
+                passed: !!element.canPlayType && canPlayType(element, 'audio/aac; codecs="mp4a.40.2"')
+            });
+
+            /* aac-lc codec (m4a) */
+
+            results.addItem({
+                key: 'audio.codecs.m4a.aac',
+                passed: !!element.canPlayType && canPlayType(element, 'audio/m4a; codecs="mp4a.40.2"')
+            });
+
+            /* aac codec (mp4) */
+
+            results.addItem({
                 key: 'audio.codecs.mp4.aac',
                 passed: !!element.canPlayType && canPlayType(element, 'audio/mp4; codecs="mp4a.40.2"')
             });

@@ -1453,8 +1453,16 @@ var tests = [
 										name: 	'MP3 support',
 										status:	'optional'
 									}, {
-										id:		'codecs.mp4.aac',
+										id:		'codecs.aac',
 										name: 	'AAC support',
+										status:	'optional'
+									}, {
+										id:		'codecs.m4a.aac',
+										name: 	'AAC-LC support',
+										status:	'optional'
+									}, {
+										id:		'codecs.mp4.aac',
+										name: 	'AAC support (MP4 container)',
 										status:	'optional'
 									}, {
 										id:		'codecs.mp4.ac3',
