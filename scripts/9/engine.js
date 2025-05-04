@@ -2630,7 +2630,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'audio.codecs.pcm',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/wav; codecs="1"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/wav; codecs="1"') || canPlayType(element, 'audio/wave; codecs="1"'))
             });
 
             /* mp3 codec */
