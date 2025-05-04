@@ -2694,6 +2694,13 @@ Test9 = (function () {
                 passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="ac-4"') || canPlayType(element, 'audio/mp4; codecs="ac-4.02.02.00"'))
             });
 
+            /* mpeg-h codec */
+
+            results.addItem({
+                key: 'audio.codecs.mp4.mhm_x',
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="mhm1.0x0C"') || canPlayType(element, 'audio/mp4; codecs="mhm1.0x0D"') || canPlayType(element, 'audio/mp4; codecs="mhm2.0x0C"') || canPlayType(element, 'audio/mp4; codecs="mhm2.0x0D"'))
+            });
+
             /* flac codec */
 
             results.addItem({

@@ -1477,6 +1477,10 @@ var tests = [
 										name: 	'Dolby AC-4 support',
 										status:	'optional'
 									}, {
+										id:		'codecs.mp4.mhm_x',
+										name: 	'MPEG-H support',
+										status:	'optional'
+									}, {
 										id:		'codecs.flac',
 										name: 	'FLAC support',
 										status:	'optional'
