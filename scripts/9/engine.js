@@ -2677,14 +2677,21 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'audio.codecs.mp4.ac3',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/mp4; codecs="ac-3"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="ac-3"') || canPlayType(element, 'audio/mp4; codecs="mp4a.a5"'))
             });
 
             /* enhanced ac3 codec */
 
             results.addItem({
                 key: 'audio.codecs.mp4.ec3',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/mp4; codecs="ec-3"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="ec-3"') || canPlayType(element, 'audio/mp4; codecs="mp4a.a6"') || canPlayType(element, 'audio/mp4; codecs="ec+3"'))
+            });
+
+            /* ac4 codec */
+
+            results.addItem({
+                key: 'audio.codecs.mp4.ac4',
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="ac-4"') || canPlayType(element, 'audio/mp4; codecs="ac-4.02.02.00"'))
             });
 
             /* flac codec */

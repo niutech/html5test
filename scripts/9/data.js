@@ -1473,6 +1473,10 @@ var tests = [
 										name: 	'Dolby Digital Plus support',
 										status:	'optional'
 									}, {
+										id:		'codecs.mp4.ac4',
+										name: 	'Dolby AC-4 support',
+										status:	'optional'
+									}, {
 										id:		'codecs.flac',
 										name: 	'FLAC support',
 										status:	'optional'
