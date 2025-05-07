@@ -1,4 +1,4 @@
-var API_BASE = 'https://api.allorigins.win/raw?url=http://html5test.eu5.net/api'
+var API_BASE = 'https://proxy.corsfix.com/?http://html5test.eu5.net/api'
 
 /* Polyfills */
 
