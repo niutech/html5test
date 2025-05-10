@@ -1462,7 +1462,7 @@ var tests = [
 										status:	'optional'
 									}, {
 										id:		'codecs.aac',
-										name: 	'AAC support',
+										name: 	'AAC (MPEG-2) support',
 										status:	'optional'
 									}, {
 										id:		'codecs.m4a.aac',
@@ -1470,7 +1470,7 @@ var tests = [
 										status:	'optional'
 									}, {
 										id:		'codecs.mp4.aac',
-										name: 	'AAC support (MP4 container)',
+										name: 	'AAC (MPEG-4) support',
 										status:	'optional'
 									}, {
 										id:		'codecs.mp4.ac3',
@@ -1509,9 +1509,9 @@ var tests = [
 										name: 	'WebM with Vorbis support',
 										status:	'optional'
 									}, {
-                                        id:     'codecs.webm.opus',
-                                        name:   'WebM with Opus support',
-                                        status: 'optional'
+										id:		'codecs.webm.opus',
+										name: 	'WebM with Opus support',
+										status:	'optional'
 									}
 								]
 					}, {
@@ -1807,7 +1807,7 @@ var tests = [
 										id:		'jpeg',
 										name: 	'JPEG support',
 										status:	'optional'
-}, {
+									}, {
 										id:		'jpegxr',
 										name: 	'JPEG-XR support',
 										status:	'optional'
