@@ -2510,7 +2510,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'video.codecs.mp4.mpeg4',
-                passed: !!element.canPlayType && canPlayType(element, 'video/mp4; codecs="mp4v.20.8"')
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="mp4v.20.8"') || canPlayType(element, 'video/mp4; codecs="mp4v.20.9"') || canPlayType(element, 'video/mp4; codecs="mp4v.20.240"'))
             });
 
             /* h.264 codec */
@@ -2519,14 +2519,28 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'video.codecs.mp4.h264',
-                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="avc1.42E01E"') || canPlayType(element, 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'))
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="avc1.42E01E"') || canPlayType(element, 'video/mp4; codecs="avc1.4D401E"') || canPlayType(element, 'video/mp4; codecs="avc1.64001E"') || canPlayType(element, 'video/mp4; codecs="avc1.64002A"') || canPlayType(element, 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'))
             });
 
             /* h.265 codec */
 
             results.addItem({
                 key: 'video.codecs.mp4.h265',
-                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="hvc1.1.L0.0"') || canPlayType(element, 'video/mp4; codecs="hev1.1.L0.0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L93.90"'))
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="hvc1.1.L0.0"') || canPlayType(element, 'video/mp4; codecs="hev1.1.L0.0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L93.90"') || canPlayType(element, 'video/mp4; codecs="hev1.1.6.L123.B0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L123.B0"') || canPlayType(element, 'video/mp4; codecs="hev1.1.6.L150.B0"') || canPlayType(element, 'video/mp4; codecs="hev1.1.6.L153.B0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L150.B0"') || canPlayType(element, 'video/mp4; codecs="hvc1.1.6.L153.B0"'))
+            });
+
+            /* h.266 codec */
+
+            results.addItem({
+                key: 'video.codecs.mp4.h266',
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="vvc1.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvi1.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvci.1.L0.CA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L0.CQA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L1.CQA"') || canPlayType(element, 'video/mp4; codecs="vvc1.1.L51.CQA"'))
+            });
+
+            /* evc codec */
+
+            results.addItem({
+                key: 'video.codecs.mp4.evc',
+                passed: !!element.canPlayType && (canPlayType(element, 'video/mp4; codecs="evc1.vprf0.vlev123"') || canPlayType(element, 'video/mp4; codecs="evc1.vprf1.vlev153"'))
             });
 
             /* theora codec */
@@ -2554,7 +2568,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'video.codecs.webm.av1',
-                passed: !!element.canPlayType && canPlayType(element, 'video/webm; codecs="av01.0.05M.08"')
+                passed: !!element.canPlayType && (canPlayType(element, 'video/webm; codecs="av01.0.01M.08"') || canPlayType(element, 'video/webm; codecs="av01.0.04M.08"') || canPlayType(element, 'video/webm; codecs="av01.0.05M.08"'))
             });
 
             /* does codec detection work properly? */
@@ -2630,7 +2644,7 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'audio.codecs.pcm',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/wav; codecs="1"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/wav; codecs="1"') || canPlayType(element, 'audio/wave; codecs="1"'))
             });
 
             /* mp3 codec */
@@ -2655,6 +2669,20 @@ Test9 = (function () {
             /* aac codec */
 
             results.addItem({
+                key: 'audio.codecs.aac',
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/aac') || canPlayType(element, 'audio/x-aac'))
+            });
+
+            /* aac-lc codec (m4a) */
+
+            results.addItem({
+                key: 'audio.codecs.m4a.aac',
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/m4a; codecs="mp4a.40.2"') || canPlayType(element, 'audio/x-m4a; codecs="mp4a.40.2"'))
+            });
+
+            /* aac codec (mp4) */
+
+            results.addItem({
                 key: 'audio.codecs.mp4.aac',
                 passed: !!element.canPlayType && canPlayType(element, 'audio/mp4; codecs="mp4a.40.2"')
             });
@@ -2663,14 +2691,35 @@ Test9 = (function () {
 
             results.addItem({
                 key: 'audio.codecs.mp4.ac3',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/mp4; codecs="ac-3"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="ac-3"') || canPlayType(element, 'audio/mp4; codecs="mp4a.a5"'))
             });
 
             /* enhanced ac3 codec */
 
             results.addItem({
                 key: 'audio.codecs.mp4.ec3',
-                passed: !!element.canPlayType && canPlayType(element, 'audio/mp4; codecs="ec-3"')
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="ec-3"') || canPlayType(element, 'audio/mp4; codecs="mp4a.a6"') || canPlayType(element, 'audio/mp4; codecs="ec+3"'))
+            });
+
+            /* ac4 codec */
+
+            results.addItem({
+                key: 'audio.codecs.mp4.ac4',
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="ac-4"') || canPlayType(element, 'audio/mp4; codecs="ac-4.02.02.00"'))
+            });
+
+            /* mpeg-h codec */
+
+            results.addItem({
+                key: 'audio.codecs.mp4.mhm_x',
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/mp4; codecs="mhm1.0x0C"') || canPlayType(element, 'audio/mp4; codecs="mhm1.0x0D"') || canPlayType(element, 'audio/mp4; codecs="mhm2.0x0C"') || canPlayType(element, 'audio/mp4; codecs="mhm2.0x0D"'))
+            });
+
+            /* flac codec */
+
+            results.addItem({
+                key: 'audio.codecs.flac',
+                passed: !!element.canPlayType && (canPlayType(element, 'audio/flac') || canPlayType(element, 'audio/mp4; codecs="flac"'))
             });
 
             /* ogg vorbis codec */

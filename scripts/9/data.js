@@ -1357,6 +1357,14 @@ var tests = [
 										name: 	'H.265 support',
 										status:	'optional'
 									}, {
+										id:		'codecs.mp4.h266',
+										name: 	'H.266 support',
+										status:	'optional'
+									}, {
+										id:		'codecs.mp4.evc',
+										name: 	'MPEG-5 EVC support',
+										status:	'optional'
+									}, {
 										id:		'codecs.ogg.theora',
 										name: 	'Ogg Theora support',
 										status:	'optional',
@@ -1453,8 +1461,16 @@ var tests = [
 										name: 	'MP3 support',
 										status:	'optional'
 									}, {
+										id:		'codecs.aac',
+										name: 	'AAC (MPEG-2) support',
+										status:	'optional'
+									}, {
+										id:		'codecs.m4a.aac',
+										name: 	'AAC-LC support',
+										status:	'optional'
+									}, {
 										id:		'codecs.mp4.aac',
-										name: 	'AAC support',
+										name: 	'AAC (MPEG-4) support',
 										status:	'optional'
 									}, {
 										id:		'codecs.mp4.ac3',
@@ -1463,6 +1479,18 @@ var tests = [
 									}, {
 										id:		'codecs.mp4.ec3',
 										name: 	'Dolby Digital Plus support',
+										status:	'optional'
+									}, {
+										id:		'codecs.mp4.ac4',
+										name: 	'Dolby AC-4 support',
+										status:	'optional'
+									}, {
+										id:		'codecs.mp4.mhm_x',
+										name: 	'MPEG-H support',
+										status:	'optional'
+									}, {
+										id:		'codecs.flac',
+										name: 	'FLAC support',
 										status:	'optional'
 									}, {
 										id:		'codecs.ogg.vorbis',
@@ -1481,9 +1509,9 @@ var tests = [
 										name: 	'WebM with Vorbis support',
 										status:	'optional'
 									}, {
-                                        id:     'codecs.webm.opus',
-                                        name:   'WebM with Opus support',
-                                        status: 'optional'
+										id:		'codecs.webm.opus',
+										name: 	'WebM with Opus support',
+										status:	'optional'
 									}
 								]
 					}, {
@@ -1779,7 +1807,7 @@ var tests = [
 										id:		'jpeg',
 										name: 	'JPEG support',
 										status:	'optional'
-}, {
+									}, {
 										id:		'jpegxr',
 										name: 	'JPEG-XR support',
 										status:	'optional'
