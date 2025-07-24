@@ -1528,15 +1528,19 @@ body.indexVisible > div#index button#indexbutton {
 	text-align: left;
 }
 
-.results input[type="checkbox"] {
+#results label {
+    font-size: 0.75em;
+}
+
+#results input[type="checkbox"] {
 	-webkit-appearance: checkbox;
 }
 
-.results input[type="checkbox"]:checked + .resultsTable tr {
+#results input[type="checkbox"]:checked + .resultsTable tr {
     display: none;
 }
 
-.results input[type="checkbox"]:checked + .resultsTable tr.missing {
+#results input[type="checkbox"]:checked + .resultsTable tr.missing {
     display: table-row;
 }
 
