@@ -1536,11 +1536,11 @@ body.indexVisible > div#index button#indexbutton {
     font-size: 0.75em;
 }
 
-#only-missing:checked ~ .resultsTable tr {
+#only-missing:checked ~ .resultsTable tbody tr {
     display: none;
 }
 
-#only-missing:checked ~ .resultsTable tr.missing {
+#only-missing:checked ~ .resultsTable tbody tr.missing {
     display: table-row;
 }
 
