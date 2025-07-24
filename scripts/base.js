@@ -760,22 +760,23 @@ ResultsTable.prototype = {
 				if (typeof tests[i].items != 'undefined') {
 					var results = this.updateItems(column, data, tests[i].items);
 
-					if (results[0] == results[1])
+					if (results[0] == results[1]) {
 						cell.innerHTML = '<div>Yes <span class="check">✔</span></div>';
-					else if (results[1] == 0)
+					} else if (results[1] == 0) {
 						cell.innerHTML = '<div>No <span class="ballot">✘</span></div>';
-					else
+						row.className += ' missing';
+					} else {
 						cell.innerHTML = '<div><span class="partially">Partial</span> <span class="partial">○</span></div>';
-				}
-
-				else {
+						row.className += ' missing';
+					}
+				} else {
 					if (match = (new RegExp(key + '=(-?[0-9]+)')).exec(data.results)) {
 						var result = parseInt(match[1], 10);
 
 						if (result & YES) {
 							switch (true) {
-								case !!(result & BUGGY): cell.innerHTML = '<div>Buggy <span class="buggy"></span></div>'; break;
-								case !!(result & OLD): cell.innerHTML = '<div>Partial <span class="partial">○</span></div>'; count[1]++; break;
+								case !!(result & BUGGY): cell.innerHTML = '<div>Buggy <span class="buggy"></span></div>'; row.className += ' missing'; break;
+								case !!(result & OLD): cell.innerHTML = '<div>Partial <span class="partial">○</span></div>'; row.className += ' missing'; count[1]++; break;
 								case !!(result & PREFIX): cell.innerHTML = '<div>Prefixed <span class="check">✔</span></div>'; count[1]++; break;
 								default: cell.innerHTML = '<div>Yes <span class="check">✔</span></div>'; count[1]++; break;
 							}
@@ -787,9 +788,11 @@ ResultsTable.prototype = {
 								case !!(result & DISABLED): cell.innerHTML = '<div>Disabled <span class="ballot">✘</span></div>'; break;
 								default: cell.innerHTML = '<div>No <span class="ballot">✘</span></div>'; break;
 							}
+							row.className += ' missing';
 						}
 					} else {
 						cell.innerHTML = '<div><span class="partially">Unknown</span> <span class="partial">?</span></div>';
+						row.className += ' missing';
 					}
 				}
 
